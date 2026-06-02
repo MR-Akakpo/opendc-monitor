@@ -1,0 +1,78 @@
+﻿thresholds:
+  environment:
+    temperature:
+      unit: C
+      normal_min: 18
+      normal_max: 27
+      warning_max: 30
+      critical_max: 35
+
+    humidity:
+      unit: "%"
+      normal_min: 40
+      normal_max: 60
+      warning_min: 30
+      warning_max: 70
+      critical_min: 20
+      critical_max: 80
+
+  hvac:
+    supply_temperature:
+      unit: C
+      normal_min: 16
+      normal_max: 22
+      warning_max: 25
+      critical_max: 30
+
+    return_temperature:
+      unit: C
+      normal_min: 22
+      normal_max: 30
+      warning_max: 35
+      critical_max: 40
+
+    return_humidity:
+      unit: "%"
+      normal_min: 40
+      normal_max: 60
+      warning_min: 30
+      warning_max: 70
+
+  fuel:
+    level:
+      unit: "%"
+      normal_min: 50
+      warning_min: 25
+      critical_min: 10
+
+  ups:
+    input_voltage:
+      unit: V
+      normal_min: 380
+      normal_max: 420
+      warning_min: 360
+      warning_max: 440
+
+    load:
+      unit: "%"
+      normal_max: 70
+      warning_max: 85
+      critical_max: 95
+
+  rectifier:
+    dc_voltage:
+      unit: VDC
+      normal_min: 48
+      normal_max: 56
+
+  power_meter:
+    voltage:
+      unit: V
+      normal_min: 380
+      normal_max: 420
+
+    current:
+      unit: A
+
+    power:
+      unit: kW

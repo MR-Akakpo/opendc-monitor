@@ -1,0 +1,15 @@
+﻿modules:
+  - dashboard
+  - power
+  - environment
+  - hvac
+  - fuel
+  - alarms
+  - trends
+  - single_line
+  - capacity
+  - incidents
+  - maintenance
+  - reports
+  - administration
+  - ai_analytics

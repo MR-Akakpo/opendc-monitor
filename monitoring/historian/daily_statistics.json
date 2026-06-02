@@ -1,0 +1,29 @@
+{
+  "total_events": 213,
+  "alarms_raised": 111,
+  "alarms_cleared": 102,
+  "critical_events": 0,
+  "warning_events": 111,
+  "top_equipment": {
+    "IT_ROOM_D16": 10,
+    "IT_ROOM_E6": 10,
+    "IT_ROOM_F6": 9,
+    "BATTERY_ROOM_A11": 8,
+    "TRANSMISSION_ROOM_B7": 8,
+    "ENERGY_CENTRE_A10": 8,
+    "TRANSMISSION_ROOM_A12": 8,
+    "IT_ROOM_F16": 8,
+    "ENERGY_CENTRE_A7": 7,
+    "BATTERY_ROOM_B4": 7,
+    "ENERGY_CENTRE_B10": 6,
+    "IT_ROOM_A11": 6,
+    "IT_ROOM_B6": 6,
+    "IT_ROOM_E16": 6,
+    "IT_ROOM_F11": 6,
+    "IT_ROOM_D11": 6,
+    "TRANSMISSION_ROOM_A7": 6,
+    "IT_ROOM_C6": 6,
+    "BATTERY_ROOM_A8": 5,
+    "IT_ROOM_C11": 5
+  }
+}

@@ -1,0 +1,150 @@
+﻿site:
+  name: OPENDC_MONITOR
+  type: DATACENTER
+  description: Internal open-source datacenter monitoring platform
+
+systems:
+
+  changeover:
+    metrics:
+      - status
+      - source
+    equipments:
+      - TCO_A
+      - TCO_B
+
+  environment:
+    metrics:
+      - temperature
+      - humidity
+    zones:
+      battery_room:
+        sensors:
+          - BATTERY_ROOM_A4
+          - BATTERY_ROOM_A8
+          - BATTERY_ROOM_A11
+          - BATTERY_ROOM_B4
+          - BATTERY_ROOM_B8
+          - BATTERY_ROOM_B11
+
+      energy_centre:
+        sensors:
+          - ENERGY_CENTRE_A4
+          - ENERGY_CENTRE_A7
+          - ENERGY_CENTRE_A10
+          - ENERGY_CENTRE_B4
+          - ENERGY_CENTRE_B7
+          - ENERGY_CENTRE_B10
+
+      it_room:
+        sensors:
+          - IT_ROOM_A6
+          - IT_ROOM_A11
+          - IT_ROOM_A16
+          - IT_ROOM_B6
+          - IT_ROOM_B11
+          - IT_ROOM_B16
+          - IT_ROOM_C6
+          - IT_ROOM_C11
+          - IT_ROOM_C16
+          - IT_ROOM_D6
+          - IT_ROOM_D11
+          - IT_ROOM_D16
+          - IT_ROOM_E6
+          - IT_ROOM_E11
+          - IT_ROOM_E16
+          - IT_ROOM_F6
+          - IT_ROOM_F11
+          - IT_ROOM_F16
+          - IT_ROOM_G6
+          - IT_ROOM_G11
+          - IT_ROOM_G16
+          - IT_ROOM_H6
+          - IT_ROOM_H11
+          - IT_ROOM_H16
+
+      transmission_room:
+        sensors:
+          - TRANSMISSION_ROOM_A12
+          - TRANSMISSION_ROOM_A7
+          - TRANSMISSION_ROOM_B7
+
+  fuel:
+    metrics:
+      - level
+      - level_fill
+      - capacity
+    equipments:
+      - BULK_TANK
+      - GENERATOR_A_DAY_TANK
+      - GENERATOR_B_DAY_TANK
+      - RECEIVING_TANK
+
+  hvac:
+    metrics:
+      - supply_temperature
+      - return_temperature
+      - return_humidity
+    equipments:
+      - IT_HVAC_A
+      - IT_HVAC_B
+      - IT_HVAC_C
+      - IT_HVAC_D
+      - IT_HVAC_E
+      - IT_HVAC_F
+      - TX_HVAC_A
+      - TX_HVAC_B
+
+  power_meter:
+    metrics:
+      - voltage
+      - current
+      - power
+    equipments:
+      - AVANTI_DIRTY_POWER
+      - AVANTI_UPS_A
+      - AVANTI_UPS_B
+      - IT_ROOM_AC_PDU_A1
+      - IT_ROOM_PDU_A2
+      - IT_ROOM_PDU_B1
+      - IT_ROOM_AC_PDU_B2
+      - MLV_A_GENERATOR_A
+      - MLV_A_GENERATOR_B
+      - MLV_A_SPS_TOTAL_LOAD
+      - MLV_A_UTILITY
+      - MLV_B_GENERATOR_A
+      - MLV_B_GENERATOR_B
+      - MLV_B_SPS_TOTAL_LOAD
+      - MLV_B_UTILITY
+      - RECTIFIER_A_POWER_METER
+      - RECTIFIER_B_POWER_METER
+      - TCO_A_PRIMARY_GENERATOR
+      - TCO_A_SECONDARY_GENERATOR
+      - TCO_A_SPS_POWER_METER
+      - TCO_A_UTILITY_POWER_METER
+      - TCO_B_PRIMARY_GENERATOR
+      - TCO_B_SECONDARY_GENERATOR
+      - TCO_B_SPS_POWER_METER
+      - TCO_B_UTILITY_POWER_METER
+      - TRANSMISSION_AC_PDU_A
+      - TRANSMISSION_AC_PDU_B
+      - UPS_A_INPUT_POWER_METER
+      - UPS_A_OUTPUT_POWER_METER
+      - UPS_B_INPUT_POWER_METER
+      - UPS_B_OUTPUT_POWER_METER
+
+  rectifier:
+    metrics:
+      - dc_voltage
+      - current
+    equipments:
+      - RECTIFIER_A
+      - RECTIFIER_B
+
+  ups:
+    metrics:
+      - input_voltage
+      - load
+    equipments:
+      - UPS_A
+      - UPS_B

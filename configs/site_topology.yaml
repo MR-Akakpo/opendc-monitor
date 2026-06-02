@@ -1,0 +1,30 @@
+﻿organization:
+  name: STELLARIX
+
+sites:
+  - id: STELLARIX_DC01
+    name: Stellarix Datacenter 01
+    type: datacenter
+    country: Senegal
+    city: Diamniadio
+    timezone: Africa/Dakar
+
+    buildings:
+      - id: BUILDING_MAIN
+        name: Main Technical Building
+
+        zones:
+          - id: IT_ROOM
+            name: IT Room
+          - id: ENERGY_CENTRE
+            name: Energy Centre
+          - id: BATTERY_ROOM
+            name: Battery Room
+          - id: TRANSMISSION_ROOM
+            name: Transmission Room
+          - id: FUEL_AREA
+            name: Fuel Area
+          - id: HVAC_AREA
+            name: HVAC Area
+          - id: POWER_ROOM
+            name: Power Room
