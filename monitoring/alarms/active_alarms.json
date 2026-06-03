@@ -1,4 +1,15 @@
 {
+  "STELLARIX_DC01|environment|TRANSMISSION_ROOM_A12|temperature": {
+    "event_type": "ALARM_RAISED",
+    "severity": "WARNING",
+    "site": "STELLARIX_DC01",
+    "system": "environment",
+    "zone": "transmission_rooms",
+    "equipment": "TRANSMISSION_ROOM_A12",
+    "metric": "temperature",
+    "value": 27.3,
+    "timestamp": "2026-06-03T01:19:05.580903+00:00"
+  },
   "STELLARIX_DC01|environment|TRANSMISSION_ROOM_A7|temperature": {
     "event_type": "ALARM_RAISED",
     "severity": "WARNING",
@@ -7,29 +18,7 @@
     "zone": "transmission_rooms",
     "equipment": "TRANSMISSION_ROOM_A7",
     "metric": "temperature",
-    "value": 27.2,
-    "timestamp": "2026-06-03T01:14:29.796334+00:00"
-  },
-  "STELLARIX_DC01|ups|UPS_B|load": {
-    "event_type": "ALARM_RAISED",
-    "severity": "WARNING",
-    "site": "STELLARIX_DC01",
-    "system": "ups",
-    "zone": null,
-    "equipment": "UPS_B",
-    "metric": "load",
-    "value": 70.25,
-    "timestamp": "2026-06-03T01:14:38.716559+00:00"
-  },
-  "STELLARIX_DC01|environment|BATTERY_ROOM_A8|temperature": {
-    "event_type": "ALARM_RAISED",
-    "severity": "WARNING",
-    "site": "STELLARIX_DC01",
-    "system": "environment",
-    "zone": "battery_rooms",
-    "equipment": "BATTERY_ROOM_A8",
-    "metric": "temperature",
-    "value": 27.88,
-    "timestamp": "2026-06-03T01:14:42.785070+00:00"
+    "value": 27.66,
+    "timestamp": "2026-06-03T01:19:09.301543+00:00"
   }
 }
