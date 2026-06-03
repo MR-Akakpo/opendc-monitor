@@ -12,6 +12,26 @@ mqtt_topics:
   metric: mode
   topic: stellarix/stellarix_dc01/changeover/tco_a/mode
 - system: changeover
+  equipment: TCO_A
+  metric: lead_lag
+  topic: stellarix/stellarix_dc01/changeover/tco_a/lead_lag
+- system: changeover
+  equipment: TCO_A
+  metric: state
+  topic: stellarix/stellarix_dc01/changeover/tco_a/state
+- system: changeover
+  equipment: TCO_A
+  metric: position
+  topic: stellarix/stellarix_dc01/changeover/tco_a/position
+- system: changeover
+  equipment: TCO_A
+  metric: input_1
+  topic: stellarix/stellarix_dc01/changeover/tco_a/input_1
+- system: changeover
+  equipment: TCO_A
+  metric: input_2
+  topic: stellarix/stellarix_dc01/changeover/tco_a/input_2
+- system: changeover
   equipment: TCO_B
   metric: status
   topic: stellarix/stellarix_dc01/changeover/tco_b/status
@@ -24,6 +44,26 @@ mqtt_topics:
   metric: mode
   topic: stellarix/stellarix_dc01/changeover/tco_b/mode
 - system: changeover
+  equipment: TCO_B
+  metric: lead_lag
+  topic: stellarix/stellarix_dc01/changeover/tco_b/lead_lag
+- system: changeover
+  equipment: TCO_B
+  metric: state
+  topic: stellarix/stellarix_dc01/changeover/tco_b/state
+- system: changeover
+  equipment: TCO_B
+  metric: position
+  topic: stellarix/stellarix_dc01/changeover/tco_b/position
+- system: changeover
+  equipment: TCO_B
+  metric: input_1
+  topic: stellarix/stellarix_dc01/changeover/tco_b/input_1
+- system: changeover
+  equipment: TCO_B
+  metric: input_2
+  topic: stellarix/stellarix_dc01/changeover/tco_b/input_2
+- system: changeover
   equipment: ATS
   metric: status
   topic: stellarix/stellarix_dc01/changeover/ats/status
@@ -35,6 +75,110 @@ mqtt_topics:
   equipment: ATS
   metric: mode
   topic: stellarix/stellarix_dc01/changeover/ats/mode
+- system: changeover
+  equipment: ATS
+  metric: transfer_count
+  topic: stellarix/stellarix_dc01/changeover/ats/transfer_count
+- system: changeover
+  equipment: ATS
+  metric: transfer_duration
+  topic: stellarix/stellarix_dc01/changeover/ats/transfer_duration
+- system: changeover
+  equipment: ATS
+  metric: last_transfer
+  topic: stellarix/stellarix_dc01/changeover/ats/last_transfer
+- system: changeover
+  equipment: ATS
+  metric: transfer_state
+  topic: stellarix/stellarix_dc01/changeover/ats/transfer_state
+- system: changeover
+  equipment: ATS
+  metric: site_supply
+  topic: stellarix/stellarix_dc01/changeover/ats/site_supply
+- system: changeover
+  equipment: ATS
+  metric: lead_generator
+  topic: stellarix/stellarix_dc01/changeover/ats/lead_generator
+- system: changeover
+  equipment: ATS
+  metric: lag_generator
+  topic: stellarix/stellarix_dc01/changeover/ats/lag_generator
+- system: changeover
+  equipment: UTILITY
+  metric: voltage
+  topic: stellarix/stellarix_dc01/changeover/utility/voltage
+- system: changeover
+  equipment: UTILITY
+  metric: frequency
+  topic: stellarix/stellarix_dc01/changeover/utility/frequency
+- system: changeover
+  equipment: UTILITY
+  metric: status
+  topic: stellarix/stellarix_dc01/changeover/utility/status
+- system: changeover
+  equipment: UTILITY
+  metric: available
+  topic: stellarix/stellarix_dc01/changeover/utility/available
+- system: changeover
+  equipment: UTILITY
+  metric: priority
+  topic: stellarix/stellarix_dc01/changeover/utility/priority
+- system: changeover
+  equipment: GENERATOR_A
+  metric: voltage
+  topic: stellarix/stellarix_dc01/changeover/generator_a/voltage
+- system: changeover
+  equipment: GENERATOR_A
+  metric: frequency
+  topic: stellarix/stellarix_dc01/changeover/generator_a/frequency
+- system: changeover
+  equipment: GENERATOR_A
+  metric: status
+  topic: stellarix/stellarix_dc01/changeover/generator_a/status
+- system: changeover
+  equipment: GENERATOR_A
+  metric: available
+  topic: stellarix/stellarix_dc01/changeover/generator_a/available
+- system: changeover
+  equipment: GENERATOR_A
+  metric: on_load
+  topic: stellarix/stellarix_dc01/changeover/generator_a/on_load
+- system: changeover
+  equipment: GENERATOR_A
+  metric: running
+  topic: stellarix/stellarix_dc01/changeover/generator_a/running
+- system: changeover
+  equipment: GENERATOR_A
+  metric: priority
+  topic: stellarix/stellarix_dc01/changeover/generator_a/priority
+- system: changeover
+  equipment: GENERATOR_B
+  metric: voltage
+  topic: stellarix/stellarix_dc01/changeover/generator_b/voltage
+- system: changeover
+  equipment: GENERATOR_B
+  metric: frequency
+  topic: stellarix/stellarix_dc01/changeover/generator_b/frequency
+- system: changeover
+  equipment: GENERATOR_B
+  metric: status
+  topic: stellarix/stellarix_dc01/changeover/generator_b/status
+- system: changeover
+  equipment: GENERATOR_B
+  metric: available
+  topic: stellarix/stellarix_dc01/changeover/generator_b/available
+- system: changeover
+  equipment: GENERATOR_B
+  metric: on_load
+  topic: stellarix/stellarix_dc01/changeover/generator_b/on_load
+- system: changeover
+  equipment: GENERATOR_B
+  metric: running
+  topic: stellarix/stellarix_dc01/changeover/generator_b/running
+- system: changeover
+  equipment: GENERATOR_B
+  metric: priority
+  topic: stellarix/stellarix_dc01/changeover/generator_b/priority
 - system: environment
   equipment: BATTERY_ROOM_A4
   metric: temperature

@@ -1,0 +1,351 @@
+﻿site:
+  company: STELLARIX
+  site_id: stellarix_dc01
+  site_name: Diamniadio Data Center
+  version: "1.0"
+
+mqtt:
+  broker: localhost
+  port: 1883
+  base_topic: stellarix/stellarix_dc01
+
+influxdb:
+  url: http://localhost:8086
+  org: stellarix
+  bucket: datacenter
+
+systems:
+
+  changeover:
+    equipments:
+      tco_a:
+        label: TCO A
+        metrics:
+          status: CHANGEOVER/TCO_A/status
+          selected_source: CHANGEOVER/TCO_A/selected_source
+          mode: CHANGEOVER/TCO_A/mode
+      tco_b:
+        label: TCO B
+        metrics:
+          status: CHANGEOVER/TCO_B/status
+          selected_source: CHANGEOVER/TCO_B/selected_source
+          mode: CHANGEOVER/TCO_B/mode
+      ats:
+        label: ATS
+        metrics:
+          status: CHANGEOVER/ATS/status
+          selected_source: CHANGEOVER/ATS/selected_source
+          mode: CHANGEOVER/ATS/mode
+
+  environment:
+    rooms:
+      battery_rooms:
+        - BATTERY_ROOM_A4
+        - BATTERY_ROOM_A8
+        - BATTERY_ROOM_A11
+        - BATTERY_ROOM_B4
+        - BATTERY_ROOM_B8
+        - BATTERY_ROOM_B11
+      energy_centres:
+        - ENERGY_CENTRE_A7
+        - ENERGY_CENTRE_A10
+        - ENERGY_CENTRE_B7
+        - ENERGY_CENTRE_B10
+      it_rooms:
+        - IT_ROOM_A6
+        - IT_ROOM_A11
+        - IT_ROOM_A16
+        - IT_ROOM_B6
+        - IT_ROOM_B11
+        - IT_ROOM_B16
+        - IT_ROOM_C6
+        - IT_ROOM_C11
+        - IT_ROOM_C16
+        - IT_ROOM_D6
+        - IT_ROOM_D11
+        - IT_ROOM_D16
+        - IT_ROOM_E6
+        - IT_ROOM_E11
+        - IT_ROOM_E16
+        - IT_ROOM_F6
+        - IT_ROOM_F11
+        - IT_ROOM_F16
+        - IT_ROOM_G6
+        - IT_ROOM_G11
+        - IT_ROOM_G16
+        - IT_ROOM_H6
+        - IT_ROOM_H11
+        - IT_ROOM_H16
+      transmission_rooms:
+        - TRANSMISSION_ROOM_A7
+        - TRANSMISSION_ROOM_A12
+        - TRANSMISSION_ROOM_B7
+        - TRANSMISSION_ROOM_B12
+    metrics:
+      temperature:
+        unit: °C
+        normal_min: 18
+        normal_max: 27
+        topic_template: ENV/{room}/temperature
+      humidity:
+        unit: "%"
+        normal_min: 35
+        normal_max: 60
+        topic_template: ENV/{room}/humidity
+
+  fuel:
+    equipments:
+      bulk_tank:
+        label: Bulk Tank
+        metrics:
+          level: FUEL/BULK_TANK/level
+          level_fill: FUEL/BULK_TANK/level_fill
+          capacity: FUEL/BULK_TANK/capacity
+      generator_a_day_tank:
+        label: Generator A Day Tank
+        metrics:
+          level: FUEL/GENERATOR_A_DAY_TANK/level
+          level_fill: FUEL/GENERATOR_A_DAY_TANK/level_fill
+          capacity: FUEL/GENERATOR_A_DAY_TANK/capacity
+      generator_b_day_tank:
+        label: Generator B Day Tank
+        metrics:
+          level: FUEL/GENERATOR_B_DAY_TANK/level
+          level_fill: FUEL/GENERATOR_B_DAY_TANK/level_fill
+          capacity: FUEL/GENERATOR_B_DAY_TANK/capacity
+      receiving_tank:
+        label: Receiving Tank
+        metrics:
+          level: FUEL/RECEIVING_TANK/level
+          level_fill: FUEL/RECEIVING_TANK/level_fill
+          capacity: FUEL/RECEIVING_TANK/capacity
+
+  hvac:
+    equipments:
+      it_hvac:
+        - IT_HVAC_A
+        - IT_HVAC_B
+        - IT_HVAC_C
+        - IT_HVAC_D
+        - IT_HVAC_E
+        - IT_HVAC_F
+      tx_hvac:
+        - TX_HVAC_A
+        - TX_HVAC_B
+    metrics:
+      supply_temperature:
+        unit: °C
+        topic_template: HVAC/{equipment}/supply_temperature
+      return_temperature:
+        unit: °C
+        topic_template: HVAC/{equipment}/return_temperature
+      return_humidity:
+        unit: "%"
+        topic_template: HVAC/{equipment}/return_humidity
+      status:
+        unit: state
+        topic_template: HVAC/{equipment}/status
+
+  power_meter:
+    equipments:
+      utility:
+        - UTILITY_INPUT
+        - MPS_OUTPUT
+      tco:
+        - TCO_A_UTILITY
+        - TCO_B_UTILITY
+        - TCO_A_GENERATOR_A
+        - TCO_A_GENERATOR_B
+        - TCO_B_GENERATOR_A
+        - TCO_B_GENERATOR_B
+      ups_input:
+        - UPS_A_INPUT
+        - UPS_B_INPUT
+      ups_output:
+        - UPS_A_OUTPUT
+        - UPS_B_OUTPUT
+      pdu:
+        - PDU_IT_A
+        - PDU_IT_B
+        - PDU_TRANSMISSION_A
+        - PDU_TRANSMISSION_B
+      sps:
+        - SPS_A
+        - SPS_B
+    metrics:
+      voltage:
+        unit: V
+        topic_template: POWER/{equipment}/voltage
+      current:
+        unit: A
+        topic_template: POWER/{equipment}/current
+      power:
+        unit: kW
+        topic_template: POWER/{equipment}/power
+      frequency:
+        unit: Hz
+        topic_template: POWER/{equipment}/frequency
+      power_factor:
+        unit: PF
+        topic_template: POWER/{equipment}/power_factor
+      energy:
+        unit: kWh
+        topic_template: POWER/{equipment}/energy
+
+  rectifier:
+    equipments:
+      rectifier_a:
+        label: Rectifier A
+        metrics:
+          dc_voltage: RECTIFIER/RECTIFIER_A/dc_voltage
+          current: RECTIFIER/RECTIFIER_A/current
+          load_percent: RECTIFIER/RECTIFIER_A/load_percent
+          status: RECTIFIER/RECTIFIER_A/status
+      rectifier_b:
+        label: Rectifier B
+        metrics:
+          dc_voltage: RECTIFIER/RECTIFIER_B/dc_voltage
+          current: RECTIFIER/RECTIFIER_B/current
+          load_percent: RECTIFIER/RECTIFIER_B/load_percent
+          status: RECTIFIER/RECTIFIER_B/status
+
+  ups:
+    equipments:
+      ups_a:
+        label: UPS A
+        metrics:
+          input_voltage: UPS/UPS_A/input_voltage
+          output_voltage: UPS/UPS_A/output_voltage
+          input_current: UPS/UPS_A/input_current
+          output_current: UPS/UPS_A/output_current
+          load: UPS/UPS_A/load
+          battery_soc: UPS/UPS_A/battery_soc
+          runtime_minutes: UPS/UPS_A/runtime_minutes
+          bypass_status: UPS/UPS_A/bypass_status
+          status: UPS/UPS_A/status
+      ups_b:
+        label: UPS B
+        metrics:
+          input_voltage: UPS/UPS_B/input_voltage
+          output_voltage: UPS/UPS_B/output_voltage
+          input_current: UPS/UPS_B/input_current
+          output_current: UPS/UPS_B/output_current
+          load: UPS/UPS_B/load
+          battery_soc: UPS/UPS_B/battery_soc
+          runtime_minutes: UPS/UPS_B/runtime_minutes
+          bypass_status: UPS/UPS_B/bypass_status
+          status: UPS/UPS_B/status
+
+  battery:
+    equipments:
+      battery_bank_a:
+        label: Battery Bank A
+        metrics:
+          soc: BATTERY/BATTERY_BANK_A/soc
+          voltage: BATTERY/BATTERY_BANK_A/voltage
+          current: BATTERY/BATTERY_BANK_A/current
+          temperature: BATTERY/BATTERY_BANK_A/temperature
+          status: BATTERY/BATTERY_BANK_A/status
+      battery_bank_b:
+        label: Battery Bank B
+        metrics:
+          soc: BATTERY/BATTERY_BANK_B/soc
+          voltage: BATTERY/BATTERY_BANK_B/voltage
+          current: BATTERY/BATTERY_BANK_B/current
+          temperature: BATTERY/BATTERY_BANK_B/temperature
+          status: BATTERY/BATTERY_BANK_B/status
+
+  alarms:
+    severities:
+      - CRITICAL
+      - URGENT
+      - WARNING
+      - EVENT
+      - INFO
+    metrics:
+      active_critical: ALARMS/active_critical
+      active_warning: ALARMS/active_warning
+      total_active: ALARMS/total_active
+      last_alarm: ALARMS/last_alarm
+
+dashboards:
+
+  dashboard_1_global_datacenter:
+    title: Vue générale Datacenter
+    widgets:
+      - site_global_status
+      - power_status
+      - cooling_status
+      - fuel_autonomy
+      - ups_load
+      - room_temperature_max
+      - active_critical_alarms
+
+  dashboard_2_power:
+    title: Power
+    widgets:
+      - utility_status
+      - generator_a_status
+      - generator_b_status
+      - ups_a_status
+      - ups_b_status
+      - tco_a_status
+      - tco_b_status
+      - pdu_it_status
+      - pdu_transmission_status
+      - rectifier_a_status
+      - rectifier_b_status
+
+  dashboard_3_environment:
+    title: Environment
+    widgets:
+      - battery_rooms_temperature
+      - energy_centres_temperature
+      - it_rooms_temperature
+      - transmission_rooms_temperature
+      - average_temperature
+      - max_temperature
+      - average_humidity
+
+  dashboard_4_fuel:
+    title: Fuel
+    widgets:
+      - bulk_tank_level
+      - generator_a_day_tank_level
+      - generator_b_day_tank_level
+      - receiving_tank_level
+      - estimated_autonomy
+      - low_level_alarm
+
+  dashboard_5_hvac:
+    title: HVAC
+    widgets:
+      - it_hvac_a_to_f
+      - tx_hvac_a_b
+      - supply_temperature
+      - return_temperature
+      - return_humidity
+      - hvac_status
+
+thresholds:
+  environment:
+    temperature_warning: 27
+    temperature_critical: 30
+    humidity_warning_low: 30
+    humidity_warning_high: 65
+  fuel:
+    level_warning: 35
+    level_critical: 20
+  ups:
+    load_warning: 80
+    load_critical: 90
+    battery_soc_warning: 40
+    battery_soc_critical: 25
+  power:
+    voltage_low_warning: 380
+    voltage_high_warning: 420
+    frequency_low_warning: 49.5
+    frequency_high_warning: 50.5
+  rectifier:
+    dc_voltage_low_warning: 48
+    dc_voltage_high_warning: 58

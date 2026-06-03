@@ -1,4 +1,15 @@
 {
+  "STELLARIX_DC01|environment|TRANSMISSION_ROOM_B12|temperature": {
+    "event_type": "ALARM_RAISED",
+    "severity": "WARNING",
+    "site": "STELLARIX_DC01",
+    "system": "environment",
+    "zone": "transmission_rooms",
+    "equipment": "TRANSMISSION_ROOM_B12",
+    "metric": "temperature",
+    "value": 27.57,
+    "timestamp": "2026-06-03T01:13:40.681972+00:00"
+  },
   "STELLARIX_DC01|environment|IT_ROOM_B11|temperature": {
     "event_type": "ALARM_RAISED",
     "severity": "WARNING",
@@ -7,62 +18,40 @@
     "zone": "it_rooms",
     "equipment": "IT_ROOM_B11",
     "metric": "temperature",
-    "value": 27.25,
-    "timestamp": "2026-06-02T18:38:17.786424+00:00"
+    "value": 27.89,
+    "timestamp": "2026-06-03T01:13:40.878958+00:00"
   },
-  "STELLARIX_DC01|rectifier|RECTIFIER_A|status": {
-    "event_type": "ALARM_RAISED",
-    "severity": "WARNING",
-    "site": "STELLARIX_DC01",
-    "system": "rectifier",
-    "zone": null,
-    "equipment": "RECTIFIER_A",
-    "metric": "status",
-    "value": "WARNING",
-    "timestamp": "2026-06-02T18:38:29.212295+00:00"
-  },
-  "STELLARIX_DC01|environment|IT_ROOM_H16|temperature": {
+  "STELLARIX_DC01|environment|IT_ROOM_D6|temperature": {
     "event_type": "ALARM_RAISED",
     "severity": "WARNING",
     "site": "STELLARIX_DC01",
     "system": "environment",
     "zone": "it_rooms",
-    "equipment": "IT_ROOM_H16",
+    "equipment": "IT_ROOM_D6",
     "metric": "temperature",
-    "value": 27.93,
-    "timestamp": "2026-06-02T18:38:35.517285+00:00"
+    "value": 27.1,
+    "timestamp": "2026-06-03T01:13:41.517761+00:00"
   },
-  "STELLARIX_DC01|hvac|IT_HVAC_C|status": {
+  "STELLARIX_DC01|environment|IT_ROOM_E11|temperature": {
     "event_type": "ALARM_RAISED",
     "severity": "WARNING",
     "site": "STELLARIX_DC01",
-    "system": "hvac",
-    "zone": "it_hvac",
-    "equipment": "IT_HVAC_C",
-    "metric": "status",
-    "value": "WARNING",
-    "timestamp": "2026-06-02T18:38:37.357258+00:00"
+    "system": "environment",
+    "zone": "it_rooms",
+    "equipment": "IT_ROOM_E11",
+    "metric": "temperature",
+    "value": 27.64,
+    "timestamp": "2026-06-03T01:13:41.988391+00:00"
   },
-  "STELLARIX_DC01|hvac|IT_HVAC_D|status": {
+  "STELLARIX_DC01|environment|IT_ROOM_H6|temperature": {
     "event_type": "ALARM_RAISED",
     "severity": "WARNING",
     "site": "STELLARIX_DC01",
-    "system": "hvac",
-    "zone": "it_hvac",
-    "equipment": "IT_HVAC_D",
-    "metric": "status",
-    "value": "WARNING",
-    "timestamp": "2026-06-02T18:38:37.599416+00:00"
-  },
-  "STELLARIX_DC01|hvac|IT_HVAC_F|status": {
-    "event_type": "ALARM_RAISED",
-    "severity": "WARNING",
-    "site": "STELLARIX_DC01",
-    "system": "hvac",
-    "zone": "it_hvac",
-    "equipment": "IT_HVAC_F",
-    "metric": "status",
-    "value": "WARNING",
-    "timestamp": "2026-06-02T18:38:38.030912+00:00"
+    "system": "environment",
+    "zone": "it_rooms",
+    "equipment": "IT_ROOM_H6",
+    "metric": "temperature",
+    "value": 27.71,
+    "timestamp": "2026-06-03T01:13:42.983708+00:00"
   }
 }
