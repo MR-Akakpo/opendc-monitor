@@ -262,382 +262,382 @@ mqtt_topics:
 - system: environment
   equipment: BATTERY_ROOM_A4
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/battery_room_a4/temperature
+  topic: stellarix/stellarix_dc01/environment/battery_room_a4/temperature
   zone: battery_rooms
 - system: environment
   equipment: BATTERY_ROOM_A4
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/battery_room_a4/humidity
+  topic: stellarix/stellarix_dc01/environment/battery_room_a4/humidity
   zone: battery_rooms
 - system: environment
   equipment: BATTERY_ROOM_A8
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/battery_room_a8/temperature
+  topic: stellarix/stellarix_dc01/environment/battery_room_a8/temperature
   zone: battery_rooms
 - system: environment
   equipment: BATTERY_ROOM_A8
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/battery_room_a8/humidity
+  topic: stellarix/stellarix_dc01/environment/battery_room_a8/humidity
   zone: battery_rooms
 - system: environment
   equipment: BATTERY_ROOM_A11
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/battery_room_a11/temperature
+  topic: stellarix/stellarix_dc01/environment/battery_room_a11/temperature
   zone: battery_rooms
 - system: environment
   equipment: BATTERY_ROOM_A11
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/battery_room_a11/humidity
+  topic: stellarix/stellarix_dc01/environment/battery_room_a11/humidity
   zone: battery_rooms
 - system: environment
   equipment: BATTERY_ROOM_B4
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/battery_room_b4/temperature
+  topic: stellarix/stellarix_dc01/environment/battery_room_b4/temperature
   zone: battery_rooms
 - system: environment
   equipment: BATTERY_ROOM_B4
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/battery_room_b4/humidity
+  topic: stellarix/stellarix_dc01/environment/battery_room_b4/humidity
   zone: battery_rooms
 - system: environment
   equipment: BATTERY_ROOM_B8
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/battery_room_b8/temperature
+  topic: stellarix/stellarix_dc01/environment/battery_room_b8/temperature
   zone: battery_rooms
 - system: environment
   equipment: BATTERY_ROOM_B8
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/battery_room_b8/humidity
+  topic: stellarix/stellarix_dc01/environment/battery_room_b8/humidity
   zone: battery_rooms
 - system: environment
   equipment: BATTERY_ROOM_B11
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/battery_room_b11/temperature
+  topic: stellarix/stellarix_dc01/environment/battery_room_b11/temperature
   zone: battery_rooms
 - system: environment
   equipment: BATTERY_ROOM_B11
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/battery_room_b11/humidity
+  topic: stellarix/stellarix_dc01/environment/battery_room_b11/humidity
   zone: battery_rooms
 - system: environment
   equipment: ENERGY_CENTRE_A7
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/energy_centre_a7/temperature
+  topic: stellarix/stellarix_dc01/environment/energy_centre_a7/temperature
   zone: energy_centres
 - system: environment
   equipment: ENERGY_CENTRE_A7
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/energy_centre_a7/humidity
+  topic: stellarix/stellarix_dc01/environment/energy_centre_a7/humidity
   zone: energy_centres
 - system: environment
   equipment: ENERGY_CENTRE_A10
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/energy_centre_a10/temperature
+  topic: stellarix/stellarix_dc01/environment/energy_centre_a10/temperature
   zone: energy_centres
 - system: environment
   equipment: ENERGY_CENTRE_A10
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/energy_centre_a10/humidity
+  topic: stellarix/stellarix_dc01/environment/energy_centre_a10/humidity
   zone: energy_centres
 - system: environment
   equipment: ENERGY_CENTRE_B7
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/energy_centre_b7/temperature
+  topic: stellarix/stellarix_dc01/environment/energy_centre_b7/temperature
   zone: energy_centres
 - system: environment
   equipment: ENERGY_CENTRE_B7
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/energy_centre_b7/humidity
+  topic: stellarix/stellarix_dc01/environment/energy_centre_b7/humidity
   zone: energy_centres
 - system: environment
   equipment: ENERGY_CENTRE_B10
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/energy_centre_b10/temperature
+  topic: stellarix/stellarix_dc01/environment/energy_centre_b10/temperature
   zone: energy_centres
 - system: environment
   equipment: ENERGY_CENTRE_B10
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/energy_centre_b10/humidity
+  topic: stellarix/stellarix_dc01/environment/energy_centre_b10/humidity
   zone: energy_centres
 - system: environment
   equipment: IT_ROOM_A6
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_a6/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_a6/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_A6
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_a6/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_a6/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_A11
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_a11/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_a11/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_A11
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_a11/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_a11/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_A16
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_a16/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_a16/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_A16
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_a16/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_a16/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_B6
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_b6/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_b6/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_B6
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_b6/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_b6/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_B11
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_b11/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_b11/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_B11
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_b11/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_b11/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_B16
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_b16/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_b16/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_B16
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_b16/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_b16/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_C6
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_c6/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_c6/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_C6
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_c6/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_c6/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_C11
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_c11/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_c11/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_C11
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_c11/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_c11/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_C16
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_c16/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_c16/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_C16
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_c16/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_c16/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_D6
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_d6/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_d6/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_D6
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_d6/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_d6/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_D11
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_d11/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_d11/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_D11
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_d11/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_d11/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_D16
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_d16/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_d16/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_D16
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_d16/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_d16/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_E6
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_e6/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_e6/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_E6
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_e6/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_e6/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_E11
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_e11/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_e11/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_E11
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_e11/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_e11/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_E16
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_e16/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_e16/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_E16
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_e16/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_e16/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_F6
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_f6/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_f6/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_F6
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_f6/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_f6/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_F11
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_f11/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_f11/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_F11
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_f11/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_f11/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_F16
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_f16/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_f16/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_F16
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_f16/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_f16/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_G6
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_g6/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_g6/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_G6
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_g6/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_g6/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_G11
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_g11/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_g11/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_G11
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_g11/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_g11/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_G16
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_g16/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_g16/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_G16
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_g16/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_g16/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_H6
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_h6/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_h6/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_H6
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_h6/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_h6/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_H11
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_h11/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_h11/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_H11
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_h11/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_h11/humidity
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_H16
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/it_room_h16/temperature
+  topic: stellarix/stellarix_dc01/environment/it_room_h16/temperature
   zone: it_rooms
 - system: environment
   equipment: IT_ROOM_H16
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/it_room_h16/humidity
+  topic: stellarix/stellarix_dc01/environment/it_room_h16/humidity
   zone: it_rooms
 - system: environment
   equipment: TRANSMISSION_ROOM_A7
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/transmission_room_a7/temperature
+  topic: stellarix/stellarix_dc01/environment/transmission_room_a7/temperature
   zone: transmission_rooms
 - system: environment
   equipment: TRANSMISSION_ROOM_A7
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/transmission_room_a7/humidity
+  topic: stellarix/stellarix_dc01/environment/transmission_room_a7/humidity
   zone: transmission_rooms
 - system: environment
   equipment: TRANSMISSION_ROOM_A12
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/transmission_room_a12/temperature
+  topic: stellarix/stellarix_dc01/environment/transmission_room_a12/temperature
   zone: transmission_rooms
 - system: environment
   equipment: TRANSMISSION_ROOM_A12
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/transmission_room_a12/humidity
+  topic: stellarix/stellarix_dc01/environment/transmission_room_a12/humidity
   zone: transmission_rooms
 - system: environment
   equipment: TRANSMISSION_ROOM_B7
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/transmission_room_b7/temperature
+  topic: stellarix/stellarix_dc01/environment/transmission_room_b7/temperature
   zone: transmission_rooms
 - system: environment
   equipment: TRANSMISSION_ROOM_B7
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/transmission_room_b7/humidity
+  topic: stellarix/stellarix_dc01/environment/transmission_room_b7/humidity
   zone: transmission_rooms
 - system: environment
   equipment: TRANSMISSION_ROOM_B12
   metric: temperature
-  topic: stellarix/stellarix_dc01/env/transmission_room_b12/temperature
+  topic: stellarix/stellarix_dc01/environment/transmission_room_b12/temperature
   zone: transmission_rooms
 - system: environment
   equipment: TRANSMISSION_ROOM_B12
   metric: humidity
-  topic: stellarix/stellarix_dc01/env/transmission_room_b12/humidity
+  topic: stellarix/stellarix_dc01/environment/transmission_room_b12/humidity
   zone: transmission_rooms
 - system: fuel
   equipment: BULK_TANK
