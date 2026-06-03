@@ -32,6 +32,42 @@ mqtt_topics:
   metric: input_2
   topic: stellarix/stellarix_dc01/changeover/tco_a/input_2
 - system: changeover
+  equipment: TCO_A
+  metric: output
+  topic: stellarix/stellarix_dc01/changeover/tco_a/output
+- system: changeover
+  equipment: TCO_A
+  metric: source_1
+  topic: stellarix/stellarix_dc01/changeover/tco_a/source_1
+- system: changeover
+  equipment: TCO_A
+  metric: source_2
+  topic: stellarix/stellarix_dc01/changeover/tco_a/source_2
+- system: changeover
+  equipment: TCO_A
+  metric: source_3
+  topic: stellarix/stellarix_dc01/changeover/tco_a/source_3
+- system: changeover
+  equipment: TCO_A
+  metric: default_primary_backup
+  topic: stellarix/stellarix_dc01/changeover/tco_a/default_primary_backup
+- system: changeover
+  equipment: TCO_A
+  metric: default_secondary_backup
+  topic: stellarix/stellarix_dc01/changeover/tco_a/default_secondary_backup
+- system: changeover
+  equipment: TCO_A
+  metric: effective_primary_backup
+  topic: stellarix/stellarix_dc01/changeover/tco_a/effective_primary_backup
+- system: changeover
+  equipment: TCO_A
+  metric: effective_secondary_backup
+  topic: stellarix/stellarix_dc01/changeover/tco_a/effective_secondary_backup
+- system: changeover
+  equipment: TCO_A
+  metric: synchronized_with
+  topic: stellarix/stellarix_dc01/changeover/tco_a/synchronized_with
+- system: changeover
   equipment: TCO_B
   metric: status
   topic: stellarix/stellarix_dc01/changeover/tco_b/status
@@ -63,6 +99,42 @@ mqtt_topics:
   equipment: TCO_B
   metric: input_2
   topic: stellarix/stellarix_dc01/changeover/tco_b/input_2
+- system: changeover
+  equipment: TCO_B
+  metric: output
+  topic: stellarix/stellarix_dc01/changeover/tco_b/output
+- system: changeover
+  equipment: TCO_B
+  metric: source_1
+  topic: stellarix/stellarix_dc01/changeover/tco_b/source_1
+- system: changeover
+  equipment: TCO_B
+  metric: source_2
+  topic: stellarix/stellarix_dc01/changeover/tco_b/source_2
+- system: changeover
+  equipment: TCO_B
+  metric: source_3
+  topic: stellarix/stellarix_dc01/changeover/tco_b/source_3
+- system: changeover
+  equipment: TCO_B
+  metric: default_primary_backup
+  topic: stellarix/stellarix_dc01/changeover/tco_b/default_primary_backup
+- system: changeover
+  equipment: TCO_B
+  metric: default_secondary_backup
+  topic: stellarix/stellarix_dc01/changeover/tco_b/default_secondary_backup
+- system: changeover
+  equipment: TCO_B
+  metric: effective_primary_backup
+  topic: stellarix/stellarix_dc01/changeover/tco_b/effective_primary_backup
+- system: changeover
+  equipment: TCO_B
+  metric: effective_secondary_backup
+  topic: stellarix/stellarix_dc01/changeover/tco_b/effective_secondary_backup
+- system: changeover
+  equipment: TCO_B
+  metric: synchronized_with
+  topic: stellarix/stellarix_dc01/changeover/tco_b/synchronized_with
 - system: changeover
   equipment: ATS
   metric: status
@@ -152,6 +224,10 @@ mqtt_topics:
   metric: priority
   topic: stellarix/stellarix_dc01/changeover/generator_a/priority
 - system: changeover
+  equipment: GENERATOR_A
+  metric: priority_rank
+  topic: stellarix/stellarix_dc01/changeover/generator_a/priority_rank
+- system: changeover
   equipment: GENERATOR_B
   metric: voltage
   topic: stellarix/stellarix_dc01/changeover/generator_b/voltage
@@ -179,6 +255,10 @@ mqtt_topics:
   equipment: GENERATOR_B
   metric: priority
   topic: stellarix/stellarix_dc01/changeover/generator_b/priority
+- system: changeover
+  equipment: GENERATOR_B
+  metric: priority_rank
+  topic: stellarix/stellarix_dc01/changeover/generator_b/priority_rank
 - system: environment
   equipment: BATTERY_ROOM_A4
   metric: temperature

@@ -1,5 +1,5 @@
 {
   "lead_generator": "GENERATOR_B",
   "lag_generator": "GENERATOR_A",
-  "transfer_time_seconds": 25
+  "transfer_time_seconds": 300
 }

@@ -7,35 +7,18 @@ INFLUX_URL = "http://localhost:8086"
 INFLUX_TOKEN = "stellarix-token"
 INFLUX_ORG = "stellarix"
 INFLUX_BUCKET = "datacenter"
-
 CONTROL_FILE = Path("runtime/changeover_control.json")
 
-
 def read_control():
-    default = {
-        "lead_generator": "GENERATOR_A",
-        "lag_generator": "GENERATOR_B",
-        "transfer_time_seconds": 5
-    }
-
     try:
-        if CONTROL_FILE.exists():
-            data = json.loads(CONTROL_FILE.read_text(encoding="utf-8"))
-            lead = str(data.get("lead_generator", "GENERATOR_A")).upper()
-            if lead not in ["GENERATOR_A", "GENERATOR_B"]:
-                lead = "GENERATOR_A"
-            lag = "GENERATOR_B" if lead == "GENERATOR_A" else "GENERATOR_A"
-
-            return {
-                "lead_generator": lead,
-                "lag_generator": lag,
-                "transfer_time_seconds": int(data.get("transfer_time_seconds", 5))
-            }
+        data = json.loads(CONTROL_FILE.read_text(encoding="utf-8"))
+        lead = str(data.get("lead_generator", "GENERATOR_A")).upper()
+        if lead not in ["GENERATOR_A", "GENERATOR_B"]:
+            lead = "GENERATOR_A"
+        lag = "GENERATOR_B" if lead == "GENERATOR_A" else "GENERATOR_A"
+        return {"lead_generator": lead, "lag_generator": lag, "transfer_time_seconds": int(data.get("transfer_time_seconds", 5))}
     except Exception:
-        pass
-
-    return default
-
+        return {"lead_generator": "GENERATOR_A", "lag_generator": "GENERATOR_B", "transfer_time_seconds": 5}
 
 def latest(equipment: str, metric: str, field: str):
     query = f'''
@@ -57,7 +40,6 @@ def latest(equipment: str, metric: str, field: str):
         return None
     return None
 
-
 def num(equipment, metric):
     try:
         v = latest(equipment, metric, "value")
@@ -65,21 +47,44 @@ def num(equipment, metric):
     except Exception:
         return None
 
-
 def state(equipment, metric):
     v = latest(equipment, metric, "state_value")
     return str(v) if v is not None else None
 
+def gen_payload(name, control):
+    priority = "LEAD" if control["lead_generator"] == name else "LAG"
+    return {
+        "voltage": num(name, "voltage"),
+        "frequency": num(name, "frequency"),
+        "status": state(name, "status") or "AVAILABLE",
+        "available": state(name, "available") or "TRUE",
+        "running": state(name, "running") or "FALSE",
+        "on_load": state(name, "on_load") or "FALSE",
+        "priority": priority,
+        "priority_rank": 2 if priority == "LEAD" else 3,
+    }
+
+def tco_payload(name, output, default_primary, default_secondary, sync, control):
+    return {
+        "status": state(name, "status") or "NORMAL",
+        "selected_source": state(name, "selected_source") or "UTILITY",
+        "mode": state(name, "mode") or "AUTO",
+        "lead_lag": f"{control['lead_generator']}=LEAD",
+        "state": state(name, "state") or "READY",
+        "position": state(name, "position") or "UTILITY",
+        "source_1": state(name, "source_1") or "UTILITY",
+        "source_2": state(name, "source_2") or "GENERATOR_A",
+        "source_3": state(name, "source_3") or "GENERATOR_B",
+        "output": state(name, "output") or output,
+        "default_primary_backup": state(name, "default_primary_backup") or default_primary,
+        "default_secondary_backup": state(name, "default_secondary_backup") or default_secondary,
+        "effective_primary_backup": control["lead_generator"],
+        "effective_secondary_backup": control["lag_generator"],
+        "synchronized_with": state(name, "synchronized_with") or sync,
+    }
 
 def get_changeover_live_data():
     control = read_control()
-    lead = control["lead_generator"]
-    lag = control["lag_generator"]
-    transfer_time = control["transfer_time_seconds"]
-
-    gen_a_priority = "LEAD" if lead == "GENERATOR_A" else "LAG"
-    gen_b_priority = "LEAD" if lead == "GENERATOR_B" else "LAG"
-
     return {
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "source": "INFLUXDB",
@@ -88,60 +93,24 @@ def get_changeover_live_data():
             "frequency": num("UTILITY", "frequency"),
             "status": state("UTILITY", "status") or "ACTIVE",
             "available": state("UTILITY", "available") or "TRUE",
-            "priority": state("UTILITY", "priority") or "PRIORITY_1"
+            "priority": state("UTILITY", "priority") or "PRIORITY_1",
+            "priority_rank": 1,
         },
-        "generator_a": {
-            "voltage": num("GENERATOR_A", "voltage"),
-            "frequency": num("GENERATOR_A", "frequency"),
-            "status": state("GENERATOR_A", "status") or "AVAILABLE",
-            "available": state("GENERATOR_A", "available") or "TRUE",
-            "running": state("GENERATOR_A", "running") or "FALSE",
-            "on_load": state("GENERATOR_A", "on_load") or "FALSE",
-            "priority": gen_a_priority,
-            "priority_rank": 2 if gen_a_priority == "LEAD" else 3
-        },
-        "generator_b": {
-            "voltage": num("GENERATOR_B", "voltage"),
-            "frequency": num("GENERATOR_B", "frequency"),
-            "status": state("GENERATOR_B", "status") or "AVAILABLE",
-            "available": state("GENERATOR_B", "available") or "TRUE",
-            "running": state("GENERATOR_B", "running") or "FALSE",
-            "on_load": state("GENERATOR_B", "on_load") or "FALSE",
-            "priority": gen_b_priority,
-            "priority_rank": 2 if gen_b_priority == "LEAD" else 3
-        },
-        "tco_a": {
-            "status": state("TCO_A", "status") or "NORMAL",
-            "selected_source": state("TCO_A", "selected_source") or "UTILITY",
-            "mode": state("TCO_A", "mode") or "AUTO",
-            "lead_lag": f"{lead}=LEAD",
-            "state": state("TCO_A", "state") or "READY",
-            "position": state("TCO_A", "position") or "UTILITY",
-            "input_1": state("TCO_A", "input_1") or "UTILITY",
-            "input_2": lead
-        },
-        "tco_b": {
-            "status": state("TCO_B", "status") or "NORMAL",
-            "selected_source": state("TCO_B", "selected_source") or "TCO_A_OUTPUT",
-            "mode": state("TCO_B", "mode") or "AUTO",
-            "lead_lag": f"{lag}=LAG",
-            "state": state("TCO_B", "state") or "READY",
-            "position": state("TCO_B", "position") or "TCO_A_OUTPUT",
-            "input_1": state("TCO_B", "input_1") or "TCO_A_OUTPUT",
-            "input_2": lag
-        },
+        "generator_a": gen_payload("GENERATOR_A", control),
+        "generator_b": gen_payload("GENERATOR_B", control),
+        "tco_a": tco_payload("TCO_A", "TGBT_A", "GENERATOR_A", "GENERATOR_B", "TCO_B", control),
+        "tco_b": tco_payload("TCO_B", "TGBT_B", "GENERATOR_B", "GENERATOR_A", "TCO_A", control),
         "ats": {
             "status": state("ATS", "status") or "NORMAL",
             "selected_source": state("ATS", "selected_source") or "UTILITY",
             "mode": state("ATS", "mode") or "AUTO",
             "transfer_count": num("ATS", "transfer_count") or 0,
-            "transfer_duration": transfer_time,
+            "transfer_duration": control["transfer_time_seconds"],
             "last_transfer": state("ATS", "last_transfer") or "NO_RECENT_TRANSFER",
             "transfer_state": state("ATS", "transfer_state") or "IDLE",
             "site_supply": state("ATS", "site_supply") or "SENELEC",
-            "lead_generator": lead,
-            "lag_generator": lag
+            "lead_generator": control["lead_generator"],
+            "lag_generator": control["lag_generator"],
         },
-        "control": control
+        "control": control,
     }
-

@@ -15,7 +15,7 @@ systems:
   changeover:
     equipments:
       tco_a:
-        label: TCO A - Triple Change Over TGBT A
+        label: TCO A
         metrics:
           status: CHANGEOVER/TCO_A/status
           selected_source: CHANGEOVER/TCO_A/selected_source
@@ -25,17 +25,8 @@ systems:
           position: CHANGEOVER/TCO_A/position
           input_1: CHANGEOVER/TCO_A/input_1
           input_2: CHANGEOVER/TCO_A/input_2
-          output: CHANGEOVER/TCO_A/output
-          source_1: CHANGEOVER/TCO_A/source_1
-          source_2: CHANGEOVER/TCO_A/source_2
-          source_3: CHANGEOVER/TCO_A/source_3
-          default_primary_backup: CHANGEOVER/TCO_A/default_primary_backup
-          default_secondary_backup: CHANGEOVER/TCO_A/default_secondary_backup
-          effective_primary_backup: CHANGEOVER/TCO_A/effective_primary_backup
-          effective_secondary_backup: CHANGEOVER/TCO_A/effective_secondary_backup
-          synchronized_with: CHANGEOVER/TCO_A/synchronized_with
       tco_b:
-        label: TCO B - Triple Change Over TGBT B
+        label: TCO B
         metrics:
           status: CHANGEOVER/TCO_B/status
           selected_source: CHANGEOVER/TCO_B/selected_source
@@ -45,15 +36,6 @@ systems:
           position: CHANGEOVER/TCO_B/position
           input_1: CHANGEOVER/TCO_B/input_1
           input_2: CHANGEOVER/TCO_B/input_2
-          output: CHANGEOVER/TCO_B/output
-          source_1: CHANGEOVER/TCO_B/source_1
-          source_2: CHANGEOVER/TCO_B/source_2
-          source_3: CHANGEOVER/TCO_B/source_3
-          default_primary_backup: CHANGEOVER/TCO_B/default_primary_backup
-          default_secondary_backup: CHANGEOVER/TCO_B/default_secondary_backup
-          effective_primary_backup: CHANGEOVER/TCO_B/effective_primary_backup
-          effective_secondary_backup: CHANGEOVER/TCO_B/effective_secondary_backup
-          synchronized_with: CHANGEOVER/TCO_B/synchronized_with
       ats:
         label: ATS
         metrics:
@@ -85,7 +67,6 @@ systems:
           on_load: CHANGEOVER/GENERATOR_A/on_load
           running: CHANGEOVER/GENERATOR_A/running
           priority: CHANGEOVER/GENERATOR_A/priority
-          priority_rank: CHANGEOVER/GENERATOR_A/priority_rank
       generator_b:
         label: Generator B Source
         metrics:
@@ -96,7 +77,6 @@ systems:
           on_load: CHANGEOVER/GENERATOR_B/on_load
           running: CHANGEOVER/GENERATOR_B/running
           priority: CHANGEOVER/GENERATOR_B/priority
-          priority_rank: CHANGEOVER/GENERATOR_B/priority_rank
   environment:
     rooms:
       battery_rooms:
