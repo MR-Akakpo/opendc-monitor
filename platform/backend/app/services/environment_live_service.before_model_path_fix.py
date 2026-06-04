@@ -18,7 +18,7 @@ def sensor_status(temp, humidity):
     return "NORMAL"
 
 def load_expected_sensors():
-    model_path = Path(__file__).resolve().parents[4] / "configs" / "datacenter_model.yaml"
+    model_path = Path(__file__).resolve().parents[3] / "configs" / "datacenter_model.yaml"
     data = yaml.safe_load(model_path.read_text(encoding="utf-8"))
     zones = data["systems"]["environment"]["zones"]
 
